@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculadora {
+    background-color: #111;
+    padding: 15px;
+    height: 70%;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.display {
+    background-color: #313131;
+    color: #fff;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    font-size: 3rem;
+    padding: 10px;
+    height: 100%;
+    text-align: right;
+    overflow-wrap: break-word;
+}
+
+.teclas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "sete   oito    nove     del      ac"
+        "quatro cinco    seis    vezes   dividir"
+        "um    dois    tres     mais    menos"
+        "zeru  ponto   igual    igual    igual";
+    gap: 5px;
+}
+
+.pressionada {
+    border: 5px inset #575757;
+}
+
+button {
+    padding: 5px;
+    background-color: #343434;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    border: 5px outset #575757;
+    cursor: pointer;
+    color: #fff;
+}
+
+.operador {
+    color: #66FF7F;
+}
+
+.sete {
+    grid-area: sete;
+}
+
+.oito {
+    grid-area: oito;
+}
+
+.nove {
+    grid-area: nove;
+}
+
+.quatro {
+    grid-area: quatro;
+}
+
+.cinco {
+    grid-area: cinco;
+}
+
+.seis {
+    grid-area: seis;
+}
+
+.um {
+    grid-area: um;
+}
+
+.dois {
+    grid-area: dois;
+}
+
+.tres {
+    grid-area: tres;
+}
+
+.zeru {
+    grid-area: zeru;
+}
+
+.ac {
+    grid-area: ac;
+    background-color: #ff5959;
+    color: #000000;
+}
+
+.del {
+    grid-area: del;
+}
+
+.igual {
+    grid-area: igual;
+}
+
+.mais {
+    grid-area: mais;
+}
+
+.menos {
+    grid-area: menos;
+}
+
+.vezes {
+    grid-area: vezes;
+}
+
+.dividir {
+    grid-area: dividir;
+}
+
+.ponto {
+    grid-area: ponto;
+}

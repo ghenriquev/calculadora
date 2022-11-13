@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div id="calculadora">
+        <div class="display">0</div>
+        <div class="teclas">
+            <button class="number sete">7</button>
+            <button class="number oito">8</button>
+            <button class="number nove">9</button>
+            <button class="number quatro">4</button>
+            <button class="number cinco">5</button>
+            <button class="number seis">6</button>
+            <button class="number um">1</button>
+            <button class="number dois">2</button>
+            <button class="number tres">3</button>
+            <button class="number zeru">0</button>
+            <button class="operador mais" data-action="somar">+</button>
+            <button class="operador menos" data-action="subtrair">-</button>
+            <button class="operador vezes" data-action="multiplicar">&times</button>
+            <button class="operador dividir" data-action="dividir">÷</button>
+            <button class="ac" data-action="limpar">AC</button>
+            <button class="ponto" data-action="decimal">.</button>
+            <button class="igual" data-action="calcular">=</button>
+            <button class="del" data-action="deletar">DEL</button>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
