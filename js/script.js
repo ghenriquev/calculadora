@@ -2,13 +2,26 @@ const calculadora = document.querySelector("#calculadora");
 const teclas = document.querySelector(".teclas");
 const display = document.querySelector(".display");
 
+// Cria um escutador de evento para a div das teclas da calculadora
 teclas.addEventListener("click", (e) => {
+
+// Se o alvo do evento for um elemento do tipo button
   if (e.target.matches("button")) {
-    const key = e.target;
-    const action = key.dataset.action;
-    const keyContent = key.innerHTML;
-    const displayedNum = display.innerHTML;
-    let isNumber = !action;
+//-----------------------------------------------------
+// Criação das variáveis
+    const key = e.target; // Atribui o alvo do evento à variável
+    
+    const action = key.dataset.action; // Atribui o valor do atributo data-action
+    
+    const keyContent = key.innerHTML; // Atribui o conteúdo da tecla (Se for a tecla 7, o número 7 por ex.) à variável keyContent
+    
+    const displayedNum = display.innerHTML; // Atribui o conteúdo do display
+
+// Variáveis de verificação
+//---------------------------------------------------------
+    let isNumber = !action; // Como não foi colocado o atributo data-action nos números, o action nesse caso é undefined (falso), então !action é verdadeiro
+   
+// A verificação é baseada no valor do data-action    
     let isDecimal = action === "decimal";
     let isOperator =
       action === "somar" ||
@@ -18,6 +31,8 @@ teclas.addEventListener("click", (e) => {
     let isAC = action === "limpar";
     let isDelete = action === "deletar";
     let isEqual = action === "calcular";
+//--------------------------------------------------------
+    
     const lastNumRemoved = displayedNum.slice(0, -1);
     const buttonArray = Array.from(key.parentNode.children);
     const previousKeyType = calculadora.dataset.previousKeyType;
